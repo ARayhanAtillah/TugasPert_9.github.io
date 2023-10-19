@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pribadi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #javascript-menu {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #hasil {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selamat datang di Website Pribadi Saya!</h1>
+
+    <div id="javascript-menu">
+        <h2>JavaScript Menu</h2>
+        <button onclick="hitungLuasPersegiPanjang()">Hitung Luas Persegi Panjang</button>
+        <button onclick="cekAngka()">Cek Angka</button>
+
+        <div id="hasil"></div>
+    </div>
+
+    <script>
+        function hitungLuasPersegiPanjang() {
+            var panjang = prompt("Masukkan panjang persegi panjang:");
+            var lebar = prompt("Masukkan lebar persegi panjang:");
+
+            // Menghitung luas persegi panjang
+            var luas = panjang * lebar;
+
+            // Menampilkan hasil
+            var hasilPesan = "Luas persegi panjang dengan panjang " + panjang +
+                " dan lebar " + lebar + " adalah " + luas;
+            document.getElementById("hasil").innerHTML = hasilPesan;
+        }
+
+        function cekAngka() {
+            var x = prompt("Masukkan angka:");
+
+            if (x > 0) {
+                var hasilPesan = "Angka " + x + " adalah positif.";
+            } else if (x < 0) {
+                var hasilPesan = "Angka " + x + " adalah negatif.";
+            } else {
+                var hasilPesan = "Angka " + x + " adalah nol.";
+            }
+
+            document.getElementById("hasil").innerHTML = hasilPesan;
+        }
+    </script>
+</body>
+
+</html>
